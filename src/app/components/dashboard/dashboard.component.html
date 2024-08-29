@@ -1,0 +1,43 @@
+<div class="container-fluid d-flex flex-column vh-100 p-3"> <!-- Added padding to the container -->
+    <!-- Dashboard content -->
+    <div class="dashboard-content flex-grow-1"> <!-- Flex-grow allows content to expand -->
+        <h2>Dashboard</h2>
+        <p class="greeting mt-2">Olá, João<br><span class="welcome">Bem-vindo de volta!</span></p>
+        <a href="/account" class="btn btn-dark profile-btn mb-4">Ver perfil</a>
+
+        <div class="main-container">
+            <div class="row box-row mt-3">
+                <div class="container-box col-12 d-flex">
+                    <div class="box mt-3 col-md-6 col-lg-4 col-sm-12 col-xls-12 d-flex justify-content-center text-center">
+                        <a class="nav-link box-link" href="/cadastrarCursos">Cadastrar novo cursos</a>
+                    </div>
+                    <div class="box mt-3 col-md-6 col-lg-4 col-sm-12 col-xls-12 d-flex justify-content-center text-center">
+                        <a class="nav-link box-link" href="/listarCursos">Ver listagem de cursos</a>
+                    </div>
+                    <div class="box mt-3 col-md-6 col-lg-4 col-sm-12 col-xls-12 d-flex justify-content-center text-center">
+                        <a class="nav-link box-link" href="/confirmarPresenca">Confirmar presença do funcionario</a>
+                    </div>
+                    <div class="box mt-3 col-md-6 col-lg-4 col-sm-12 col-xls-12 d-flex justify-content-center text-center">
+                        <a class="nav-link box-link" href="/relatorioPresenca">Gerar relatorio de presença</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="bottom-nav mt-3">
+        <nav class="nav justify-content-around mb-3">
+            <a class="nav-link active" href="#">
+                <i class="bi bi-house-door-fill"></i><br>Início
+            </a>
+            <a class="nav-link" href="#">
+                <i class="bi bi-search"></i><br>Explorar
+            </a>
+            <a class="nav-link" routerLink="/myaccount-component">
+                <i class="bi bi-person-circle"></i><br>Minha conta
+            </a>
+        </nav>
+    </div>
+</div>

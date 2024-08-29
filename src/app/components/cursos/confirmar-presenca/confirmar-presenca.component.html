@@ -1,0 +1,52 @@
+<div class="animated fadeIn">
+    <div class="" style="height: 80vh;">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="icon-list"></i> Confirmar presença
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="container mt-3">
+                            <label for="codCurso">Digite o código do curso</label>
+                            <input type="text" class="form-control" placeholder="Código do curso" name="codCurso" required>
+                            <button class="btn btn-primary mt-3 mb-3" (click)="confirmarPresenca()">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" [ngClass]="{ 'show': showModal }" tabindex="" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Confimar presença</h5>
+                                <button type="button" class="close" (click)="fecharModal()" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h2>Escaneie o crachá do funcionário</h2>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" (click)="fecharModal()">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom-nav">
+    <nav class="nav justify-content-around mb-3">
+        <a class="nav-link" href="/dashboard">
+            <i class="bi bi-house-door-fill"></i><br>Início
+        </a>
+        <a class="nav-link" href="#">
+            <i class="bi bi-search"></i><br>Explorar
+        </a>
+        <a class="nav-link" href="/account">
+            <i class="bi bi-person-circle"></i><br>Minha conta
+        </a>
+    </nav>
+</div>

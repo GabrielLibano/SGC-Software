@@ -1,0 +1,58 @@
+<div class="animated fadeIn">
+    <div class="" style="height: 80vh;">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="icon-list"></i>Relatorio de presença
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="container mt-3">
+                            <label for="codCurso">Digite o código do curso</label>
+                            <input type="text" class="form-control" placeholder="Código do curso" name="codCurso" 
+                             required>
+                            <button class="btn btn-primary mt-3" (click)="gerarRelatorio()">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="lista.length > 0">
+                    <div class="col-md-12 col-sm-12 ml-3 mt-5">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped table-dark" id="table-query">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th class="th-sm" scope="col">Curso</th>
+                                        <th class="th-sm" scope="col">Participante</th>
+                                        <th class="th-sm" scope="col">Data do curso</th>
+                                        <th class="th-sm" scope="col">Status do participante</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let curso of lista">
+                                        <th scope="row">{{curso.curso}}</th>
+                                        <td>{{curso.participante}}</td>
+                                        <td>{{curso.data}}</td>
+                                        <td>{{curso.statusParticipante}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom-nav">
+    <nav class="nav justify-content-around mb-3">
+        <a class="nav-link active" href="/dashboard">
+            <i class="bi bi-house-door-fill"></i><br>Início
+        </a>
+        <a class="nav-link" href="#">
+            <i class="bi bi-search"></i><br>Explorar
+        </a>
+        <a class="nav-link" routerLink="/account">
+            <i class="bi bi-person-circle"></i><br>Minha conta
+        </a>
+    </nav>
+</div>

@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+#toast-container .toast-title, #toast-container .toast-message{
+    background-color: transparent;
+  }

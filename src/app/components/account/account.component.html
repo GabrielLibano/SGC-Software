@@ -1,0 +1,115 @@
+<body>
+    <div class="container-fluid d-flex flex-column vh-100 p-3">
+        <!-- Dashboard content -->
+        <div class="dashboard-content flex-grow-1">
+            <h2>Dashboard</h2>
+            <h4 class="greeting">Olá, João</h4>
+            <p class="text-muted welcome">Seu XP atual é: <span class="xp-value">700/1600</span></p>
+
+            <!-- Experience Progress Bar -->
+            <div class="progress my-3">
+                <div class="progress-bar" role="progressbar" style="width: 44%;" aria-valuenow="44" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+            </div>
+
+            <!-- Suggested Courses Carousel -->
+            <h4>Cursos sugeridos</h4>
+            <div id="suggestedCoursesCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../../../../src/assets/images/course1.jpg" class="d-block w-100 h-50" alt="Product Management Fundamentals">
+                        <div class="carousel-caption">
+                            <h5>Product Management Fundamentals</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../../../src/assets/images/course1.jpg" class="d-block w-100 h-50" alt="Design Thinking for Business">
+                        <div class="carousel-caption">
+                            <h5>Design Thinking for Business</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../../../../src/assets/images/course1.jpg" class="d-block w-100 h-50" alt="Agile Project Management Guide">
+                        <div class="carousel-caption">
+                            <h5>Agile Project Management Guide</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <h4 style="font-weight: bold;" class="mt-4">Progresso</h4>
+            <div class="progress-info">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <p class="ml-2 mb-0">
+                        Seu progresso<br>
+                        <span class="text-muted">3 cursos em andamento</span>
+                    </p>
+                    <a href="#" class="ml-auto">→</a>
+                </div>
+            </div>
+            <!-- Individual Course Progress Bars -->
+            <div class="my-3">
+                <div class="mb-1">Gestão de Projetos</div>
+                <div class="progress" role="progressbar" aria-label="Gestão de Projetos" aria-valuenow="70"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar " style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="my-3">
+                <div class="mb-1">Marketing Digital</div>
+                <div class="progress" role="progressbar" aria-label="Marketing Digital" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar " style="width: 50%;">50%</div>
+                </div>
+            </div>
+            <div class="my-3">
+                <div class="mb-1">Python para Iniciantes</div>
+                <div class="progress" role="progressbar" aria-label="Python para Iniciantes" aria-valuenow="20"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar " style="width: 20%;">20%</div>
+                </div>
+            </div>
+
+            <!-- Achievements Section -->
+            <h4>Conquistas</h4>
+            <div class="d-flex flex-column">
+                <div class="achievement mb-2">
+                    <i class="bi bi-trophy-fill"></i> Novato
+                </div>
+                <div class="achievement mb-2">
+                    <i class="bi bi-trophy-fill"></i> Iniciante
+                </div>
+                <div class="achievement mb-2">
+                    <i class="bi bi-trophy-fill"></i> Aprendiz
+                </div>
+            </div>
+
+
+            <!-- Bottom navigation stays at the bottom -->
+            <div class="bottom-nav mt-4">
+                <nav class="nav justify-content-around">
+                    <a class="nav-link active" href="/dashboard">
+                        <i class="bi bi-house-door-fill"></i><br>Início
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-search"></i><br>Explorar
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-person-circle"></i><br>Minha conta
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <script>
+            // Example of updating the progress bars dynamically
+            function updateProgressBar(course, percentage) {
+                document.querySelector(`.${course} .progress-bar`).style.width = percentage + '%';
+            }
+
+            // Example usage
+            updateProgressBar('gestao-projetos', 80);
+            updateProgressBar('marketing-digital', 60);
+            updateProgressBar('python-iniciantes', 30);
+        </script>
